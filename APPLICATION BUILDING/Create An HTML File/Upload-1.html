@@ -1,73 +1,58 @@
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Predict</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 
-<style>
-.bar
-{
-margin: 0px;
-padding: 15px;
-background-color:rgb(26, 148, 113);
-/* opacity:0.6; */
-font-family:'Poppins',sans-serif;
-font-size:25px;
-}
-a
-{
-color:#fff;
-float:right;
-text-decoration:none;
-padding-right:20px;
-}
-a:hover{
-    padding: 3.5px;
-    background: #FAAE42;
-
-}
-h1{
-    color:rgb(100, 5, 29);
-    font-family:Poppins;
-    font-size:30
-}
-h2{
-    color:rgb(100, 5, 29);
-    font-family: Poppins;
-    font-size:60;
-    margin-bottom: 10px;
+    <head>
+        <title>Predict</title>
+        <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    .bar
+    {
+    margin: 0px;
+    padding:20px;
+    background-color:white;
+    opacity:0.6;
+    color:black;
+    font-family:'Roboto',sans-serif;
+    font-style: italic;
+    border-radius:20px;
+    font-size:25px;
+    }
+    a
+    {
+    color:red;
+    float:right;
+    text-decoration:none;
+    font-style:normal;
+    padding-right:20px;
+    }
+    a:hover{
+    background-color:black;
+    color:white;
+    border-radius:15px;0
+    font-size:30px;
+    padding-left:10px;
+    }
+    body
+    {
+    background-image: url("https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?cs=srgb&dl=pexels-ella-olsson-1640777.jpg&fm=jpg");
+    background-size: cover;
+    }
+    p
+    {
+    color:white;
+    font-style:italic;
+    font-size:30px;
+    }
+    h1,h2
+    {
+     color:0101DF;
+    }
+    </style> 
+    </head>
     
-}
-.my-cta-button{
-
-    font-size: 20px;
-    color: rgb(15, 15, 15); 
-    border: 1px solid #0e0e0ccf;
-    padding: 3.5px;
-   
-    cursor: pointer; 
-}
-.my-cta-button:hover{
-    border: 2px solid #faae42;
-    padding: 3.5px;
-    background: #FAAE42;
-}
-p
-{
-color:white;
-font-family: Poppins;
-font-size:30px;
-}
-</style>
-</head>
-
-<body>
-    <div class="bar">    
+    <body>
+    
+     <div class="bar">    
       <a href="/pred">Predict</a>
       <a href="/home">Home</a>
      <br>
@@ -100,8 +85,26 @@ font-size:30px;
          <option value="3">Thai</option>
      
        </select><br><br>
-       <input class="form-input" type="text" name="city_code" placeholder="Enter city_code"><br><br>
-     <input class="form-input" type="text" name="region_code" placeholder="Enter region_code"><br><br>
+       <select id="city_code" name="city_code">
+<option value="">City Code</option>
+    <option value="590">590</option>
+    <option value="526">526</option> 
+    <option value="638">638</option>
+    <option value="others">Others</option>
+
+  </select><br><br>
+     <select id="region_code" name="region_code">
+<option value="">Region Code</option>
+    <option value="23">23</option>
+    <option value="34">34</option> 
+    <option value="35">35</option>
+    <option value="56">56</option>
+    <option value="71">71</option>
+    <option value="77">77</option> 
+    <option value="85">85</option>
+    <option value="93">93</option> 
+    </select><br><br> 
+
      <select id="category" name="category">
      <option value="">Category</option>
          <option value="0">Beverages</option>
@@ -122,10 +125,10 @@ font-size:30px;
      
                      <input type="submit" class="my-cta-button" value="Predict">
                  </form>
-     
+     </center>
          <br>
           <h1 class="predict">Number of orders: {{ prediction_text }}</h1>
-            </div></center>
+            </div>
          </div>
      </body>
 </body>
